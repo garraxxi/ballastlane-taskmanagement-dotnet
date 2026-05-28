@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TaskManagement.API</name>
+    </assembly>
+    <members>
+        <member name="T:TaskManagement.API.Controllers.AuthController">
+            <summary>
+            Authentication operations (public endpoints)
+            </summary>
+        </member>
+        <member name="M:TaskManagement.API.Controllers.AuthController.Register(TaskManagement.Application.DTOs.Auth.RegisterRequest)">
+            <summary>
+            Register a new user and receive a JWT token
+            </summary>
+            <param name="request">Registration details</param>
+            <returns>JWT token and user information</returns>
+            <response code="200">User created successfully</response>
+            <response code="400">Validation error or email already exists</response>
+        </member>
+        <member name="M:TaskManagement.API.Controllers.AuthController.Login(TaskManagement.Application.DTOs.Auth.LoginRequest)">
+            <summary>
+            Login with email and password to obtain a JWT Bearer token
+            </summary>
+            <param name="request">Login credentials</param>
+            <returns>JWT token and user information</returns>
+            <response code="200">Login successful</response>
+            <response code="401">Invalid credentials</response>
+        </member>
+        <member name="T:TaskManagement.API.Controllers.TasksController">
+            <summary>
+            Task management operations. All endpoints require authentication via JWT Bearer token.
+            </summary>
+        </member>
+        <member name="M:TaskManagement.API.Controllers.TasksController.GetMyTasks">
+            <summary>
+            Get all tasks belonging to the currently authenticated user
+            </summary>
+            <response code="200">Returns the list of tasks</response>
+            <response code="401">Unauthorized - valid JWT Bearer token required</response>
+        </member>
+        <member name="M:TaskManagement.API.Controllers.TasksController.GetTask(System.Guid)">
+            <summary>
+            Get a single task by ID (only if it belongs to the current user)
+            </summary>
+            <param name="id">Task identifier</param>
+            <response code="200">Returns the requested task</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Task not found or does not belong to the user</response>
+        </member>
+        <member name="M:TaskManagement.API.Controllers.TasksController.CreateTask(TaskManagement.Application.DTOs.Tasks.CreateTaskRequest)">
+            <summary>
+            Create a new task for the authenticated user
+            </summary>
+            <param name="request">Task creation details</param>
+            <response code="201">Task created successfully</response>
+            <response code="400">Validation failed</response>
+            <response code="401">Unauthorized</response>
+        </member>
+        <member name="M:TaskManagement.API.Controllers.TasksController.UpdateTask(System.Guid,TaskManagement.Application.DTOs.Tasks.UpdateTaskRequest)">
+            <summary>
+            Update an existing task (partial update supported)
+            </summary>
+            <param name="id">Task identifier</param>
+            <param name="request">Fields to update (any subset is allowed)</param>
+            <response code="200">Task updated successfully</response>
+            <response code="400">Validation or business rule error</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Task not found</response>
+        </member>
+        <member name="M:TaskManagement.API.Controllers.TasksController.DeleteTask(System.Guid)">
+            <summary>
+            Delete a task belonging to the current user
+            </summary>
+            <param name="id">Task identifier</param>
+            <response code="204">Task deleted successfully</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Task not found</response>
+        </member>
+        <member name="T:Program">
+            <summary>
+            Auto-generated public partial Program class for top-level statement apps.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type)">
+            <summary>
+            Generates a documentation comment ID for a type.
+            Example: T:Namespace.Outer+Inner`1 becomes T:Namespace.Outer.Inner`1
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Reflection.PropertyInfo)">
+            <summary>
+            Generates a documentation comment ID for a property.
+            Example: P:Namespace.ContainingType.PropertyName or for an indexer P:Namespace.ContainingType.Item(System.Int32)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type,System.String)">
+            <summary>
+            Generates a documentation comment ID for a property given its container type and property name.
+            Example: P:Namespace.ContainingType.PropertyName
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Reflection.MethodInfo)">
+            <summary>
+            Generates a documentation comment ID for a method (or constructor).
+            For example:
+              M:Namespace.ContainingType.MethodName(ParamType1,ParamType2)~ReturnType
+              M:Namespace.ContainingType.#ctor(ParamType)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.GetTypeDocId(System.Type,System.Boolean,System.Boolean)">
+            <summary>
+            Generates a documentation ID string for a type.
+            This method handles nested types (replacing '+' with '.'),
+            generic types, arrays, pointers, by-ref types, and generic parameters.
+            The <paramref name="includeGenericArguments"/> flag controls whether
+            constructed generic type arguments are emitted, while <paramref name="omitGenericArity"/>
+            controls whether the generic arity marker (e.g. "`1") is appended.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.NormalizeDocId(System.String)">
+            <summary>
+            Normalizes a documentation comment ID to match the compiler-style format.
+            Strips the return type suffix for ordinary methods but retains it for conversion operators.
+            </summary>
+            <param name="docId">The documentation comment ID to normalize.</param>
+            <returns>The normalized documentation comment ID.</returns>
+        </member>
+    </members>
+</doc>

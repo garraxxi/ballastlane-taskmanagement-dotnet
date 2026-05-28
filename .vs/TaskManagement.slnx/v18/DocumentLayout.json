@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Public\\jobjunt\\ballastlane\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{720D906E-AF5A-37FA-92A0-D7981C4C6B3F}|src\\Application\\TaskManagement.Application.csproj|d:\\public\\jobjunt\\ballastlane\\src\\application\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{720D906E-AF5A-37FA-92A0-D7981C4C6B3F}|src\\Application\\TaskManagement.Application.csproj|solutionrelative:src\\application\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A97E2F8-074B-0B4F-CD0D-C99EC178EF57}|src\\Infrastructure\\TaskManagement.Infrastructure.csproj|d:\\public\\jobjunt\\ballastlane\\src\\infrastructure\\repositories\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A97E2F8-074B-0B4F-CD0D-C99EC178EF57}|src\\Infrastructure\\TaskManagement.Infrastructure.csproj|solutionrelative:src\\infrastructure\\repositories\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF9717B6-7789-9DE5-EB2B-0904F7453997}|src\\API\\TaskManagement.API.csproj|d:\\public\\jobjunt\\ballastlane\\src\\api\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF9717B6-7789-9DE5-EB2B-0904F7453997}|src\\API\\TaskManagement.API.csproj|solutionrelative:src\\api\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF9717B6-7789-9DE5-EB2B-0904F7453997}|src\\API\\TaskManagement.API.csproj|d:\\public\\jobjunt\\ballastlane\\src\\api\\taskmanagement.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CF9717B6-7789-9DE5-EB2B-0904F7453997}|src\\API\\TaskManagement.API.csproj|solutionrelative:src\\api\\taskmanagement.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF9717B6-7789-9DE5-EB2B-0904F7453997}|src\\API\\TaskManagement.API.csproj|d:\\public\\jobjunt\\ballastlane\\src\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF9717B6-7789-9DE5-EB2B-0904F7453997}|src\\API\\TaskManagement.API.csproj|solutionrelative:src\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A97E2F8-074B-0B4F-CD0D-C99EC178EF57}|src\\Infrastructure\\TaskManagement.Infrastructure.csproj|d:\\public\\jobjunt\\ballastlane\\src\\infrastructure\\taskmanagement.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4A97E2F8-074B-0B4F-CD0D-C99EC178EF57}|src\\Infrastructure\\TaskManagement.Infrastructure.csproj|solutionrelative:src\\infrastructure\\taskmanagement.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A97E2F8-074B-0B4F-CD0D-C99EC178EF57}|src\\Infrastructure\\TaskManagement.Infrastructure.csproj|d:\\public\\jobjunt\\ballastlane\\src\\infrastructure\\auth\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A97E2F8-074B-0B4F-CD0D-C99EC178EF57}|src\\Infrastructure\\TaskManagement.Infrastructure.csproj|solutionrelative:src\\infrastructure\\auth\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TaskService.cs",
+              "DocumentMoniker": "D:\\Public\\jobjunt\\ballastlane\\src\\Application\\Services\\TaskService.cs",
+              "RelativeDocumentMoniker": "src\\Application\\Services\\TaskService.cs",
+              "ToolTip": "D:\\Public\\jobjunt\\ballastlane\\src\\Application\\Services\\TaskService.cs",
+              "RelativeToolTip": "src\\Application\\Services\\TaskService.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T10:15:35.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TaskRepository.cs",
+              "DocumentMoniker": "D:\\Public\\jobjunt\\ballastlane\\src\\Infrastructure\\Repositories\\TaskRepository.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Repositories\\TaskRepository.cs",
+              "ToolTip": "D:\\Public\\jobjunt\\ballastlane\\src\\Infrastructure\\Repositories\\TaskRepository.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Repositories\\TaskRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T10:15:01.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TasksController.cs",
+              "DocumentMoniker": "D:\\Public\\jobjunt\\ballastlane\\src\\API\\Controllers\\TasksController.cs",
+              "RelativeDocumentMoniker": "src\\API\\Controllers\\TasksController.cs",
+              "ToolTip": "D:\\Public\\jobjunt\\ballastlane\\src\\API\\Controllers\\TasksController.cs",
+              "RelativeToolTip": "src\\API\\Controllers\\TasksController.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAA0wGgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T09:42:09.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaskManagement.API",
+              "DocumentMoniker": "D:\\Public\\jobjunt\\ballastlane\\src\\API\\TaskManagement.API.csproj",
+              "RelativeDocumentMoniker": "src\\API\\TaskManagement.API.csproj",
+              "ToolTip": "D:\\Public\\jobjunt\\ballastlane\\src\\API\\TaskManagement.API.csproj",
+              "RelativeToolTip": "src\\API\\TaskManagement.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-27T08:23:39.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Public\\jobjunt\\ballastlane\\src\\API\\Program.cs",
+              "RelativeDocumentMoniker": "src\\API\\Program.cs",
+              "ToolTip": "D:\\Public\\jobjunt\\ballastlane\\src\\API\\Program.cs",
+              "RelativeToolTip": "src\\API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T15:57:41.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TaskManagement.Infrastructure",
+              "DocumentMoniker": "D:\\Public\\jobjunt\\ballastlane\\src\\Infrastructure\\TaskManagement.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\TaskManagement.Infrastructure.csproj",
+              "ToolTip": "D:\\Public\\jobjunt\\ballastlane\\src\\Infrastructure\\TaskManagement.Infrastructure.csproj",
+              "RelativeToolTip": "src\\Infrastructure\\TaskManagement.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-26T15:51:37.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "D:\\Public\\jobjunt\\ballastlane\\src\\Infrastructure\\Auth\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Auth\\JwtTokenService.cs",
+              "ToolTip": "D:\\Public\\jobjunt\\ballastlane\\src\\Infrastructure\\Auth\\JwtTokenService.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Auth\\JwtTokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T15:50:00.779Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

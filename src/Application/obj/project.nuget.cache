@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "J62Ew1f+Hys=",
+  "success": true,
+  "projectFilePath": "/shared/Public/jobjunt/ballastlane/src/Application/TaskManagement.Application.csproj",
+  "expectedPackageFiles": [
+    "/home/sobarrano/.nuget/packages/bcrypt.net-next/4.2.0/bcrypt.net-next.4.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}
