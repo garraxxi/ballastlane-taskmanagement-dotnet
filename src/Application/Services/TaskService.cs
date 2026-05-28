@@ -67,12 +67,17 @@ public class TaskService : ITaskService
         if (request.Status.HasValue)
             existing.Status = request.Status.Value;
 
-        // Only update DueDate when the client explicitly sends the property.
-        // - HasValue == true  → set to the provided date
-        // - HasValue == false && request.DueDate == null → we currently cannot reliably distinguish
-        //   "client omitted the field" from "client sent null to clear".
-        // For this implementation we only apply when HasValue (common case). Clearing an existing
-        // due date can be added later with a better DTO shape (e.g. a separate "clearDueDate" flag).
+        // DueDate partial update behavior:
+        // - If request.DueDate.HasValue == true  → update to the provided date (including setting it)
+        // - If request.DueDate is null (omitted or explicitly null) → do NOT change the existing DueDate.
+        //
+        // Reason: With the current UpdateTaskRequest shape (nullable DateTime?), System.Text.Json
+        // cannot distinguish between "field was omitted" and "client sent null to clear the date".
+        // We chose the safer behavior: only mutate DueDate when the client explicitly provided a value.
+        //
+        // Limitation: There is currently no way for a client to *clear* an existing due date via the API.
+        // A future improvement could introduce a separate `bool? ClearDueDate` flag or a dedicated
+        // "clear due date" endpoint if this becomes a requirement.
         if (request.DueDate.HasValue)
             existing.DueDate = request.DueDate;
 

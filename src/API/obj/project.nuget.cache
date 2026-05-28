@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gy0G4iUDQ00=",
+  "dgSpecHash": "iL4hmKHkRfw=",
   "success": true,
   "projectFilePath": "/shared/Public/jobjunt/ballastlane/src/API/TaskManagement.API.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,7 @@
     "/home/sobarrano/.nuget/packages/microsoft.identitymodel.protocols/8.0.1/microsoft.identitymodel.protocols.8.0.1.nupkg.sha512",
     "/home/sobarrano/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/8.0.1/microsoft.identitymodel.protocols.openidconnect.8.0.1.nupkg.sha512",
     "/home/sobarrano/.nuget/packages/microsoft.identitymodel.tokens/8.0.1/microsoft.identitymodel.tokens.8.0.1.nupkg.sha512",
-    "/home/sobarrano/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512",
+    "/home/sobarrano/.nuget/packages/microsoft.openapi/2.0.1/microsoft.openapi.2.0.1.nupkg.sha512",
     "/home/sobarrano/.nuget/packages/scalar.aspnetcore/2.14.14/scalar.aspnetcore.2.14.14.nupkg.sha512",
     "/home/sobarrano/.nuget/packages/system.identitymodel.tokens.jwt/8.0.1/system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512"
   ],

@@ -86,6 +86,7 @@ D:/Public/jobjunt/ballastlane/src/API/obj/Debug/net10.0/ref/TaskManagement.API.d
 /shared/Public/jobjunt/ballastlane/src/API/obj/Debug/net10.0/TaskManagement.API.csproj.CoreCompileInputs.cache
 /shared/Public/jobjunt/ballastlane/src/API/obj/Debug/net10.0/TaskManagement.API.MvcApplicationPartsAssemblyInfo.cs
 /shared/Public/jobjunt/ballastlane/src/API/obj/Debug/net10.0/TaskManagement.API.MvcApplicationPartsAssemblyInfo.cache
+/shared/Public/jobjunt/ballastlane/src/API/obj/Debug/net10.0/TaskManagement.API.sourcelink.json
 /shared/Public/jobjunt/ballastlane/src/API/obj/Debug/net10.0/rjimswa.dswa.cache.json
 /shared/Public/jobjunt/ballastlane/src/API/obj/Debug/net10.0/rjsmrazor.dswa.cache.json
 /shared/Public/jobjunt/ballastlane/src/API/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json
@@ -102,4 +103,3 @@ D:/Public/jobjunt/ballastlane/src/API/obj/Debug/net10.0/ref/TaskManagement.API.d
 /shared/Public/jobjunt/ballastlane/src/API/obj/Debug/net10.0/TaskManagement.API.pdb
 /shared/Public/jobjunt/ballastlane/src/API/obj/Debug/net10.0/TaskManagement.API.genruntimeconfig.cache
 /shared/Public/jobjunt/ballastlane/src/API/obj/Debug/net10.0/ref/TaskManagement.API.dll
-/shared/Public/jobjunt/ballastlane/src/API/obj/Debug/net10.0/TaskManagement.API.sourcelink.json

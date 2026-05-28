@@ -27,9 +27,9 @@ D:/Public/jobjunt/ballastlane/src/Infrastructure/obj/Debug/net10.0/ref/TaskManag
 /shared/Public/jobjunt/ballastlane/src/Infrastructure/obj/Debug/net10.0/TaskManagement.Infrastructure.AssemblyInfoInputs.cache
 /shared/Public/jobjunt/ballastlane/src/Infrastructure/obj/Debug/net10.0/TaskManagement.Infrastructure.AssemblyInfo.cs
 /shared/Public/jobjunt/ballastlane/src/Infrastructure/obj/Debug/net10.0/TaskManagement.Infrastructure.csproj.CoreCompileInputs.cache
+/shared/Public/jobjunt/ballastlane/src/Infrastructure/obj/Debug/net10.0/TaskManagement.Infrastructure.sourcelink.json
 /shared/Public/jobjunt/ballastlane/src/Infrastructure/obj/Debug/net10.0/TaskMana.BCA0E1A6.Up2Date
 /shared/Public/jobjunt/ballastlane/src/Infrastructure/obj/Debug/net10.0/TaskManagement.Infrastructure.dll
 /shared/Public/jobjunt/ballastlane/src/Infrastructure/obj/Debug/net10.0/refint/TaskManagement.Infrastructure.dll
 /shared/Public/jobjunt/ballastlane/src/Infrastructure/obj/Debug/net10.0/TaskManagement.Infrastructure.pdb
 /shared/Public/jobjunt/ballastlane/src/Infrastructure/obj/Debug/net10.0/ref/TaskManagement.Infrastructure.dll
-/shared/Public/jobjunt/ballastlane/src/Infrastructure/obj/Debug/net10.0/TaskManagement.Infrastructure.sourcelink.json

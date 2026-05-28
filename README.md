@@ -115,8 +115,19 @@ On first startup (when no users exist), the backend automatically seeds:
 - A stray development secret file that was previously committed has been removed and added to `.gitignore`.
 - In a real production system you would use Azure Key Vault / AWS Secrets Manager / user secrets + environment variables.
 
+## Known Limitations
+
+- **Partial updates for `dueDate`**: When performing a partial update via `PUT /api/Tasks/{id}`, omitting the `dueDate` field (or sending `null`) will **not** clear an existing due date. The current `UpdateTaskRequest` DTO cannot reliably distinguish "field omitted" from "explicitly clear the date". Only explicitly providing a `dueDate` value will update it. This is documented in `TaskService.UpdateTaskAsync` and was a deliberate safe default given the DTO shape.
+
 ## Next Steps / Known Polish Items
 
+See the dedicated [REMAINING_WORK_CHECKLIST.md](./REMAINING_WORK_CHECKLIST.md) for a prioritized, effort-estimated list of remaining work based on the original Ballast Lane PDF requirements and evaluation criteria.
+
+Current high-priority gaps:
+- Add controller/API integration tests (PDF explicitly requires tests for API endpoints)
+- Make GenAI documentation presentation-ready with concrete prompt + AI output examples
+
+### Quick Polish Items
 - Full task editing UI in the frontend dashboard (currently supports status changes inline + full create/delete)
 - Additional edge-case and controller integration tests
 

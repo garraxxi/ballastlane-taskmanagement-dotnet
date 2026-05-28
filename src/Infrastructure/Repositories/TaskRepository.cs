@@ -22,7 +22,7 @@ public class TaskRepository : ITaskRepository
     public Task<TaskItem?> GetByIdAndUserIdAsync(Guid id, Guid userId)
     {
         var task = _context.Tasks.FindOne(x => x.Id == id && x.UserId == userId);
-        return Task.FromResult(task);
+        return Task.FromResult<TaskItem?>(task);
     }
 
     public Task<TaskItem> CreateAsync(TaskItem task)

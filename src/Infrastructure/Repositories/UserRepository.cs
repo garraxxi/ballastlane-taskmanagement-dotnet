@@ -16,13 +16,13 @@ public class UserRepository : IUserRepository
     public Task<User?> GetByEmailAsync(string email)
     {
         var user = _context.Users.FindOne(x => x.Email == email.ToLowerInvariant());
-        return Task.FromResult(user);
+        return Task.FromResult<User?>(user);
     }
 
     public Task<User?> GetByIdAsync(Guid id)
     {
         var user = _context.Users.FindOne(x => x.Id == id);
-        return Task.FromResult(user);
+        return Task.FromResult<User?>(user);
     }
 
     public Task<User> CreateAsync(User user)

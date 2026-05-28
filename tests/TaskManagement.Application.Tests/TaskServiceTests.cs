@@ -121,7 +121,33 @@ public class TaskServiceTests
         existing.Title.Should().Be("New Title");
         existing.Description.Should().Be("Original desc"); // unchanged
         existing.Status.Should().Be(TaskStatus.Todo);       // unchanged
+        existing.DueDate.Should().BeCloseTo(DateTime.UtcNow.AddDays(5), TimeSpan.FromSeconds(5)); // DueDate preserved when not provided
         existing.UpdatedAt.Should().BeCloseTo(DateTime.UtcNow, TimeSpan.FromSeconds(5));
+    }
+
+    [Fact]
+    public async Task UpdateTaskAsync_ShouldUpdateDueDate_WhenExplicitlyProvided()
+    {
+        var userId = Guid.NewGuid();
+        var existing = new TaskItem
+        {
+            Id = Guid.NewGuid(),
+            UserId = userId,
+            Title = "Task with due date",
+            DueDate = DateTime.UtcNow.AddDays(10),
+            CreatedAt = DateTime.UtcNow.AddDays(-1),
+            UpdatedAt = DateTime.UtcNow.AddDays(-1)
+        };
+        _taskRepoMock.Setup(r => r.GetByIdAndUserIdAsync(existing.Id, userId)).ReturnsAsync(existing);
+        _taskRepoMock.Setup(r => r.UpdateAsync(It.IsAny<TaskItem>())).ReturnsAsync((TaskItem t) => t);
+
+        var newDueDate = DateTime.UtcNow.AddDays(20);
+        var request = new UpdateTaskRequest(null, null, null, newDueDate);
+
+        var result = await _sut.UpdateTaskAsync(existing.Id, request, userId);
+
+        result.IsSuccess.Should().BeTrue();
+        existing.DueDate.Should().BeCloseTo(newDueDate, TimeSpan.FromSeconds(5));
     }
 
     [Fact]

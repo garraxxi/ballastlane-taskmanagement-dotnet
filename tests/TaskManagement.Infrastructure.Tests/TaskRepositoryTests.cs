@@ -6,7 +6,7 @@ using TaskStatus = TaskManagement.Domain.Enums.TaskStatus;
 
 namespace TaskManagement.Infrastructure.Tests;
 
-public class TaskRepositoryTests : IDisposable
+public class TaskRepositoryTests
 {
     private readonly LiteDbContext _context;
     private readonly TaskRepository _sut;
@@ -97,8 +97,4 @@ public class TaskRepositoryTests : IDisposable
         afterDelete.Should().BeNull();
     }
 
-    public void Dispose()
-    {
-        _context.Dispose();
-    }
 }

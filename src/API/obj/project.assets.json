@@ -159,7 +159,7 @@
           }
         }
       },
-      "Microsoft.OpenApi/2.0.0": {
+      "Microsoft.OpenApi/2.0.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.OpenApi.dll": {
@@ -467,10 +467,10 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
-    "Microsoft.OpenApi/2.0.0": {
-      "sha512": "GGYLfzV/G/ct80OZ45JxnWP7NvMX1BCugn/lX7TH5o0lcVaviavsLMTxmFV2AybXWjbi3h6FF1vgZiTK6PXndw==",
+    "Microsoft.OpenApi/2.0.1": {
+      "sha512": "RVndbzSbZbFWbbCwnbEDw+sDyYYbpVsxyYd26txW9AIrZoCLaf3gKeKMsOvNKo4EL0ZKUex94fCU2qGf1ykf6w==",
       "type": "package",
-      "path": "microsoft.openapi/2.0.0",
+      "path": "microsoft.openapi/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -481,7 +481,7 @@
         "lib/netstandard2.0/Microsoft.OpenApi.dll",
         "lib/netstandard2.0/Microsoft.OpenApi.pdb",
         "lib/netstandard2.0/Microsoft.OpenApi.xml",
-        "microsoft.openapi.2.0.0.nupkg.sha512",
+        "microsoft.openapi.2.0.1.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
     },
@@ -548,6 +548,7 @@
       "BCrypt.Net-Next >= 4.2.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 10.0.8",
       "Microsoft.AspNetCore.OpenApi >= 10.0.8",
+      "Microsoft.OpenApi >= 2.0.*",
       "Scalar.AspNetCore >= 2.*",
       "TaskManagement.Application >= 1.0.0",
       "TaskManagement.Domain >= 1.0.0",
@@ -618,6 +619,10 @@
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[10.0.8, )"
+          },
+          "Microsoft.OpenApi": {
+            "target": "Package",
+            "version": "[2.0.*, )"
           },
           "Scalar.AspNetCore": {
             "target": "Package",

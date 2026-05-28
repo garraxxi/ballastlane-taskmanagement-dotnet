@@ -5,7 +5,7 @@ using TaskManagement.Infrastructure.Repositories;
 
 namespace TaskManagement.Infrastructure.Tests;
 
-public class UserRepositoryTests : IDisposable
+public class UserRepositoryTests
 {
     private readonly LiteDbContext _context;
     private readonly UserRepository _sut;
@@ -64,8 +64,4 @@ public class UserRepositoryTests : IDisposable
         user.Should().BeNull();
     }
 
-    public void Dispose()
-    {
-        _context.Dispose();
-    }
 }

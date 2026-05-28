@@ -16,8 +16,8 @@ D:/Public/jobjunt/ballastlane/src/Domain/obj/Debug/net10.0/ref/TaskManagement.Do
 /shared/Public/jobjunt/ballastlane/src/Domain/obj/Debug/net10.0/TaskManagement.Domain.AssemblyInfoInputs.cache
 /shared/Public/jobjunt/ballastlane/src/Domain/obj/Debug/net10.0/TaskManagement.Domain.AssemblyInfo.cs
 /shared/Public/jobjunt/ballastlane/src/Domain/obj/Debug/net10.0/TaskManagement.Domain.csproj.CoreCompileInputs.cache
+/shared/Public/jobjunt/ballastlane/src/Domain/obj/Debug/net10.0/TaskManagement.Domain.sourcelink.json
 /shared/Public/jobjunt/ballastlane/src/Domain/obj/Debug/net10.0/TaskManagement.Domain.dll
 /shared/Public/jobjunt/ballastlane/src/Domain/obj/Debug/net10.0/refint/TaskManagement.Domain.dll
 /shared/Public/jobjunt/ballastlane/src/Domain/obj/Debug/net10.0/TaskManagement.Domain.pdb
 /shared/Public/jobjunt/ballastlane/src/Domain/obj/Debug/net10.0/ref/TaskManagement.Domain.dll
-/shared/Public/jobjunt/ballastlane/src/Domain/obj/Debug/net10.0/TaskManagement.Domain.sourcelink.json

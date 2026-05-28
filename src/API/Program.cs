@@ -19,7 +19,21 @@ builder.Services.AddEndpointsApiExplorer();
 
 // === DEFINITIVE OPENAPI + SCALAR SETUP (Modern .NET 10 native approach) ===
 // This is the clean, future-proof way in .NET 10. No more Swashbuckle/OpenAPI version conflicts.
-builder.Services.AddOpenApi();
+// Use the modern .NET 10 OpenAPI support with basic customization
+builder.Services.AddOpenApi(options =>
+{
+    options.AddDocumentTransformer((document, context, cancellationToken) =>
+    {
+        document.Info.Title = "Task Management API";
+        document.Info.Version = "1.0";
+        document.Info.Description =
+            "RESTful API for a personal task management system.\n\n" +
+            "Built following Clean Architecture principles using LiteDB (no EF/Dapper/Mediator).\n" +
+            "All task operations are strictly scoped to the authenticated user.";
+
+        return Task.CompletedTask;
+    });
+});
 
 // JWT Authentication
 var jwtSecret = builder.Configuration["Jwt:Secret"] ?? "ThisIsASuperSecretKeyForDevelopmentOnly123456789!";
@@ -81,7 +95,8 @@ app.MapScalarApiReference(options =>
     options
         .WithTitle("Task Management API")
         .WithTheme(ScalarTheme.Default)
-        .WithDefaultHttpClient(ScalarTarget.CSharp, ScalarClient.HttpClient);
+        .WithDefaultHttpClient(ScalarTarget.CSharp, ScalarClient.HttpClient)
+        .AddPreferredSecuritySchemes("Bearer");
 });
 
 app.UseHttpsRedirection();

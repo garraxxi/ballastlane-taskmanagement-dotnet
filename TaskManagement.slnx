@@ -19,4 +19,7 @@
   <Folder Name="/tests/TaskManagement.Infrastructure.Tests/">
     <Project Path="tests/TaskManagement.Infrastructure.Tests/TaskManagement.Infrastructure.Tests.csproj" />
   </Folder>
+  <Folder Name="/tests/TaskManagement.API.Tests/">
+    <Project Path="tests/TaskManagement.API.Tests/TaskManagement.API.Tests.csproj" />
+  </Folder>
 </Solution>
