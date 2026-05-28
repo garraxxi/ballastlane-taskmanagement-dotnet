@@ -28,3 +28,4 @@ D:/Public/jobjunt/ballastlane/src/Application/obj/Debug/net10.0/ref/TaskManageme
 /shared/Public/jobjunt/ballastlane/src/Application/obj/Debug/net10.0/refint/TaskManagement.Application.dll
 /shared/Public/jobjunt/ballastlane/src/Application/obj/Debug/net10.0/TaskManagement.Application.pdb
 /shared/Public/jobjunt/ballastlane/src/Application/obj/Debug/net10.0/ref/TaskManagement.Application.dll
+/shared/Public/jobjunt/ballastlane/src/Application/obj/Debug/net10.0/TaskManagement.Application.sourcelink.json

@@ -18,14 +18,17 @@ export class TasksComponent implements OnInit {
   loading = signal(false);
   error = signal<string | null>(null);
 
-  // Modal state for Create
-  showCreateModal = signal(false);
-  createForm: CreateTaskRequest = {
+  // Modal state (reused for both Create and Edit)
+  showTaskModal = signal(false);
+  isEditMode = false;
+  editingTaskId: string | null = null;
+
+  taskForm: CreateTaskRequest = {
     title: '',
     description: '',
     dueDate: null
   };
-  creating = signal(false);
+  saving = signal(false);
 
   get currentUser$() {
     return this.authService.currentUser$;
@@ -58,36 +61,71 @@ export class TasksComponent implements OnInit {
     });
   }
 
-  // === Modal for Create ===
+  // === Task Modal (Create + Edit reuse) ===
+  closeTaskModal() {
+    this.showTaskModal.set(false);
+    this.isEditMode = false;
+    this.editingTaskId = null;
+  }
+
   openCreateModal() {
     const endOfDay = new Date();
     endOfDay.setHours(23, 59, 0, 0);
     const pad = (n: number) => n.toString().padStart(2, '0');
     const localStr = `${endOfDay.getFullYear()}-${pad(endOfDay.getMonth() + 1)}-${pad(endOfDay.getDate())}T${pad(endOfDay.getHours())}:${pad(endOfDay.getMinutes())}`;
-    this.createForm = { title: '', description: '', dueDate: localStr };
-    this.showCreateModal.set(true);
+    this.taskForm = { title: '', description: '', dueDate: localStr };
+    this.isEditMode = false;
+    this.editingTaskId = null;
+    this.showTaskModal.set(true);
   }
 
-  closeCreateModal() {
-    this.showCreateModal.set(false);
+  openEditModal(task: TaskDto) {
+    this.taskForm = {
+      title: task.title,
+      description: task.description,
+      dueDate: task.dueDate
+    };
+    this.isEditMode = true;
+    this.editingTaskId = task.id;
+    this.showTaskModal.set(true);
   }
 
-  createTask() {
-    if (!this.createForm.title.trim()) return;
+  saveTask() {
+    if (!this.taskForm.title.trim()) return;
 
-    this.creating.set(true);
+    this.saving.set(true);
 
-    this.taskService.createTask(this.createForm).subscribe({
-      next: () => {
-        this.creating.set(false);
-        this.closeCreateModal();
-        this.loadTasks();
-      },
-      error: (err) => {
-        this.creating.set(false);
-        alert(err?.error?.title || 'Failed to create task');
-      }
-    });
+    if (this.isEditMode && this.editingTaskId) {
+      const updateReq = {
+        title: this.taskForm.title,
+        description: this.taskForm.description,
+        status: null as any,
+        dueDate: this.taskForm.dueDate
+      };
+      this.taskService.updateTask(this.editingTaskId, updateReq).subscribe({
+        next: () => {
+          this.saving.set(false);
+          this.closeTaskModal();
+          this.loadTasks();
+        },
+        error: (err) => {
+          this.saving.set(false);
+          alert(err?.error?.title || 'Failed to update task');
+        }
+      });
+    } else {
+      this.taskService.createTask(this.taskForm).subscribe({
+        next: () => {
+          this.saving.set(false);
+          this.closeTaskModal();
+          this.loadTasks();
+        },
+        error: (err) => {
+          this.saving.set(false);
+          alert(err?.error?.title || 'Failed to create task');
+        }
+      });
+    }
   }
 
   // Update status inline

@@ -4,6 +4,10 @@ info:
   description: |
     RESTful API for a simple task management system built as part of a .NET technical interview exercise.
 
+    **Implementation notes:**
+    - Auth endpoints are mounted under `/api/Auth` (PascalCase from controller name). Most HTTP clients treat routes as case-insensitive.
+    - Error responses currently use ASP.NET `ProblemDetails` shape.
+
     ## Features
     - User registration and JWT-based authentication
     - Full CRUD operations on tasks (title, description, status, due_date)
@@ -187,6 +191,10 @@ components:
 
     ErrorResponse:
       type: object
+      description: |
+        Note: The current implementation returns ASP.NET Core ProblemDetails objects
+        (with "title", "status", "type" etc.) rather than this exact shape for most errors.
+        This schema is aspirational / for documentation purposes.
       properties:
         error:
           type: string

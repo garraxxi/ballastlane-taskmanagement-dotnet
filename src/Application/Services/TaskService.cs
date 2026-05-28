@@ -67,7 +67,13 @@ public class TaskService : ITaskService
         if (request.Status.HasValue)
             existing.Status = request.Status.Value;
 
-        if (request.DueDate.HasValue || request.DueDate == null)
+        // Only update DueDate when the client explicitly sends the property.
+        // - HasValue == true  → set to the provided date
+        // - HasValue == false && request.DueDate == null → we currently cannot reliably distinguish
+        //   "client omitted the field" from "client sent null to clear".
+        // For this implementation we only apply when HasValue (common case). Clearing an existing
+        // due date can be added later with a better DTO shape (e.g. a separate "clearDueDate" flag).
+        if (request.DueDate.HasValue)
             existing.DueDate = request.DueDate;
 
         existing.UpdatedAt = DateTime.UtcNow;

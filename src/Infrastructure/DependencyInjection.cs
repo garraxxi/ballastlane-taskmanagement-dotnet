@@ -8,9 +8,9 @@ namespace TaskManagement.Infrastructure;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services, string connectionString = "TaskManagement.db")
+    public static IServiceCollection AddInfrastructure(this IServiceCollection services, string databasePath = "TaskManagement.db")
     {
-        services.AddSingleton<LiteDbContext>(_ => new LiteDbContext(connectionString));
+        services.AddSingleton<LiteDbContext>(_ => new LiteDbContext(databasePath));
 
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<ITaskRepository, TaskRepository>();

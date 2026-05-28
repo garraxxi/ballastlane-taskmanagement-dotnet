@@ -12,4 +12,11 @@
   <Folder Name="/src/Infrastructure/">
     <Project Path="src/Infrastructure/TaskManagement.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/tests/" />
+  <Folder Name="/tests/TaskManagement.Application.Tests/">
+    <Project Path="tests/TaskManagement.Application.Tests/TaskManagement.Application.Tests.csproj" />
+  </Folder>
+  <Folder Name="/tests/TaskManagement.Infrastructure.Tests/">
+    <Project Path="tests/TaskManagement.Infrastructure.Tests/TaskManagement.Infrastructure.Tests.csproj" />
+  </Folder>
 </Solution>

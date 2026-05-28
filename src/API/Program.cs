@@ -45,7 +45,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddAuthorization();
 
 // Register layers
-builder.Services.AddInfrastructure(jwtSecret); // LiteDB + repositories + JWT token service
+builder.Services.AddInfrastructure(); // LiteDB + repositories + JWT token service (uses default "TaskManagement.db")
 builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 

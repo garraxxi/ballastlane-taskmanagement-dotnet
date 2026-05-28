@@ -15,7 +15,8 @@ Full-stack task management application using **Clean Architecture** on the backe
 │   JWT Bearer Token injected via HTTP Interceptor      │
 ├──────────────────────────────────────────────────────┤
 │              ASP.NET Core 10 Web API                   │
-│              (localhost:5000)                          │
+│              (https://localhost:7171)                  │
+│              (http://localhost:5171)                   │
 │                                                        │
 │   ┌────────────────────────────────────────────────┐  │
 │   │  API Layer (Controllers)                      │  │
@@ -118,7 +119,8 @@ Full-stack task management application using **Clean Architecture** on the backe
 | TypeScript | 5.9 | Typed JavaScript |
 | Tailwind CSS | 4.3 | Utility-first CSS styling |
 | RxJS | 7.8 | Reactive HTTP calls + state |
-| Vitest | 4.0 | Unit testing (configured via `@angular/build`) |
+| Vitest | 4.0 | Frontend unit testing (configured via `@angular/build`) |
+| xUnit + Moq + FluentAssertions | 2.9 / 4.20 | Backend unit tests for Application & Infrastructure layers (21 tests covering services, validation, ownership, repositories with in-memory LiteDB) |
 | ng-openapi-gen | 1.0 | OpenAPI client generation (configured) |
 
 ### Project Structure
@@ -171,3 +173,4 @@ src/app/
 6. **Update status**: Dropdown change triggers `PUT /api/Tasks/{id}` with numeric enum (0=Todo, 1=InProgress, 2=Done).
 7. **Backend**: `TasksController` extracts `userId` from JWT claims, calls `TaskService` → validates ownership → `TaskRepository` queries/updates LiteDB.
 8. **API documentation**: Available at `/scalar/v1` via Scalar UI with live HTTP client testing.
+9. **Tests**: Comprehensive backend unit tests (Application + Infrastructure layers) + frontend component tests. Run with `dotnet test` and `npm test -- --watch=false` in the frontend folder. See root README.md for full setup.
